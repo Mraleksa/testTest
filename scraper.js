@@ -44,12 +44,12 @@ function run(db) {
 	fetchPage("http://w1.c1.rada.gov.ua/pls/radan_gs09/ns_golos?g_id=15122", function (body) {
 		// Use cheerio to find things in the page with css selectors.
 		var $ = cheerio.load(
-			'body',
+			`body`,
 			 { decodeEntities: false }
 				    );
 
 		//var elements = $("div.media-body span.p-name").each(function () {
-			var value = $("#0idd386").html();
+			var value = $("#0idd386").text();
 			updateRow(db, value);
 		//});
 
