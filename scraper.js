@@ -46,7 +46,7 @@ function run(db) {
 		var $ = cheerio.load(body);
 
 		//var elements = $("div.media-body span.p-name").each(function () {
-			var value = $("#0idd386").text();
+			var value = $("#0idd386").html();
 			updateRow(db, value);
 		//});
 
